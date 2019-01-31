@@ -49,10 +49,10 @@ describe("enhancement", () => {
       expect(enhancer.success(armor[2])).toEqual("failed");
     });
     test("add one for success less than 16", () => {
-      expect(enhancer.success(weapon[1])).toEqual(passEquip);
+      expect(enhancer.success(weapons[1])).toEqual(passEquip);
     });
     test("returns accurate string for >= 16 enhancement", () => {
-      expect(enhancer.success(weapon[3])).toEqual(passHighEnhance);
+      expect(enhancer.success(weapons[2])).toEqual(passHighEnhance);
     });
   });
 });
