@@ -1,4 +1,7 @@
 module.exports = {
-  success: item => {},
-  fail: item => {}
+  success: item => {
+    return item;
+  },
+  fail: item => {},
+  repair: item => {}
 };
