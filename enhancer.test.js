@@ -3,25 +3,25 @@ const equip = require("./equipment.js");
 const armor = equip.armor;
 const weapons = equip.weapons;
 const lowWeapon = {
-  name: "[+1]awesome sword",
+  name: "[+1] awesome sword",
   type: "weapon",
   durability: 12,
   enhancement: "+1"
 };
 const lowArmor = {
-  name: "[+1]old boots",
+  name: "[+1] old boots",
   type: "armor",
   durability: 4,
   enhancement: "+1"
 };
 const passEquip = {
-  name: "[+1]spear",
+  name: "[+1] spear",
   type: "weapon",
   durability: 100,
   enhancement: "+1"
 };
 const passHighEnhance = {
-  name: "[DUO]bow",
+  name: "[DUO] bow",
   type: "weapon",
   durability: 100,
   enhancement: "DUO"
