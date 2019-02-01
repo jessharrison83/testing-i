@@ -7,6 +7,12 @@ module.exports = {
       type: "armor",
       durability: 9,
       enhancement: "TRI"
+    },
+    {
+      name: "[+15] shiny boots",
+      type: "armor",
+      durability: 9,
+      enhancement: "+15"
     }
   ],
   weapons: [
@@ -22,6 +28,18 @@ module.exports = {
       durability: 100,
       enhancement: "+0"
     },
-    { name: "[PRI] bow", type: "weapon", durability: 100, enhancement: "PRI" }
+    { name: "[PRI] bow", type: "weapon", durability: 100, enhancement: "PRI" },
+    {
+      name: "[PEN] awesomebow",
+      type: "weapon",
+      durability: 100,
+      enhancement: "PEN"
+    },
+    {
+      name: "[+12] big sword",
+      type: "weapon",
+      durability: 23,
+      enhancement: "+12"
+    }
   ]
 };

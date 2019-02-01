@@ -48,7 +48,7 @@ module.exports = {
       item.enhancement = enhanceString;
       item.name = `[${enhanceString}] ${strippedName}`;
       return item;
-    } else if (!durability) {
+    } else if (!durability || currentEnhance === 20) {
       return "failed";
     } else if (currentEnhance >= 15) {
       console.log(currentEnhance);
