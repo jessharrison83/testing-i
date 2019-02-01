@@ -15,8 +15,8 @@ const durabilityCheck = (item, enhance) => {
 };
 
 const highEnhanceRevert = enhance => {
-  const numbers = [16, 17, 18, 19, 20];
-  const levels = ["PRI", "DUO", "TRI", "TET", "PEN"];
+  const numbers = [15, 16, 17, 18, 19, 20];
+  const levels = ["+15", "PRI", "DUO", "TRI", "TET", "PEN"];
   return levels[numbers.indexOf(enhance)];
 };
 
@@ -24,7 +24,7 @@ const nameStripper = (name, enhance) => {
   if (enhance != 0) {
     const split = name.split(" ");
     split.shift();
-    return split.join("");
+    return split.join(" ");
   } else return name;
 };
 
@@ -59,16 +59,27 @@ module.exports = {
       return item;
     }
   },
-  fail: item => {},
+  fail: item => {
+    let level = enhanceConvert(item.enhancement);
+    if (level < 15) {
+      item.durability -= 5;
+      return item;
+    } else if (level === 15) {
+      item.durability -= 10;
+      return item;
+    } else {
+      item.durability -= 10;
+      level -= 1;
+      item.enhancement = highEnhanceRevert(level);
+      const stripped = nameStripper(item.name, level);
+      if (level > 15) {
+        item.name = `[${item.enhancement}] ${stripped}`;
+        return item;
+      } else {
+        item.name = `[+${level}] ${stripped}`;
+        return item;
+      }
+    }
+  },
   repair: item => {}
 };
-
-// if weapon:
-
-// if enhancement < 7, add one to enhancement and return item.
-
-// if enhancement >= 7 && < 15, && durability >= 25, add one to enhance and return
-// if durability < 25, run return failed
-
-// if enhancement = 15 or any of the table && durability >=10, add one and return item
-// if durability < 10 return failed

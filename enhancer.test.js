@@ -40,7 +40,7 @@ describe("enhancement", () => {
     test("durability decrease by 5 when enhance < 15", () => {
       expect(enhancer.fail(weapons[4])).toEqual(results.lowFail);
     });
-    test("durability decrease to 0 when enhance >= 15", () => {
+    test("durability decrease by 10 when enhance >= 15", () => {
       expect(enhancer.fail(armor[3])).toEqual(results.highFail);
     });
     test("enhancement level changes if fail at EL >= 16", () => {

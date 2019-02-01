@@ -26,7 +26,7 @@ module.exports = {
   highFail: {
     name: "[+15] shiny boots",
     type: "armor",
-    durability: 0,
+    durability: -1,
     enhancement: "+15"
   },
   stringLevelsFail: {
