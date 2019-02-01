@@ -81,5 +81,8 @@ module.exports = {
       }
     }
   },
-  repair: item => {}
+  repair: item => {
+    item.durability = 100;
+    return item;
+  }
 };

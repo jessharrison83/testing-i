@@ -40,5 +40,11 @@ module.exports = {
     type: "weapon",
     durability: 100,
     enhancement: "DUO"
+  },
+  repaired: {
+    name: "[+15] shiny boots",
+    type: "armor",
+    durability: 100,
+    enhancement: "+15"
   }
 };

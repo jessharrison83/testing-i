@@ -47,4 +47,9 @@ describe("enhancement", () => {
       expect(enhancer.fail(armor[2])).toEqual(results.stringLevelsFail);
     });
   });
+  describe("repair function", () => {
+    test("durability restored to 100", () => {
+      expect(enhancer.repair(armor[3])).toEqual(results.repaired);
+    });
+  });
 });
